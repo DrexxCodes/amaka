@@ -46,11 +46,11 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="py-20 lg:py-28 bg-white border-t-2 border-black">
+    <section id="solutions" className="py-20 lg:py-28 bg-white border-t-4 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-[#DCFCE7] mb-5" style={{boxShadow:'3px 3px 0 #000'}}>
+          <div className="inline-flex items-center gap-2 border-2 border-black px-4 py-2 bg-[#22C55E] mb-5" style={{boxShadow:'4px 4px 0 #000'}}>
             <span className="text-xs font-bold uppercase tracking-widest">Solutions</span>
           </div>
           <h2 className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4" style={{fontFamily:'Syne,sans-serif'}}>
@@ -66,8 +66,8 @@ export default function Solutions() {
           {solutions.map((s, i) => (
             <div
               key={i}
-              className={`border-2 border-black p-6 ${s.bg} ${s.textWhite ? 'text-white' : 'text-black'} hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform`}
-              style={{boxShadow:'5px 5px 0 #000'}}
+              className={`border-2 border-black p-6 ${s.bg} ${s.textWhite ? 'text-white' : 'text-black'}`}
+              style={{boxShadow:'6px 6px 0 #000'}}
             >
               <div className="flex items-start justify-between mb-4">
                 <span className="text-3xl">{s.icon}</span>
@@ -82,12 +82,12 @@ export default function Solutions() {
         </div>
 
         {/* Quote */}
-        <div className="mt-14 border-2 border-black p-8 bg-white relative" style={{boxShadow:'6px 6px 0 #000'}}>
-          <div className="text-6xl font-black text-[#22C55E] leading-none mb-2" style={{fontFamily:'Syne,sans-serif'}}>"</div>
-          <p className="text-xl sm:text-2xl font-black leading-snug max-w-2xl" style={{fontFamily:'Syne,sans-serif'}}>
+        <div className="mt-14 border-3 border-black p-8 bg-[#22C55E] relative" style={{boxShadow:'7px 7px 0 #000'}}>
+          <div className="text-6xl font-black text-black leading-none mb-2" style={{fontFamily:'Syne,sans-serif'}}>"</div>
+          <p className="text-xl sm:text-2xl font-black leading-snug max-w-2xl text-black" style={{fontFamily:'Syne,sans-serif'}}>
             I used to spend 4 hours a day replying customers on WhatsApp. Now Amaka does it and I only step in to confirm payments.
           </p>
-          <p className="mt-4 text-sm text-gray-500 font-semibold">— Chisom, Fashion Business Owner, Awka</p>
+          <p className="mt-4 text-sm text-black font-semibold">— Chisom, Fashion Business Owner, Awka</p>
         </div>
       </div>
     </section>

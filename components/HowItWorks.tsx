@@ -32,11 +32,11 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-white border-t-2 border-black">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-[#f5f5f5] border-t-4 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-[#22C55E] mb-5" style={{boxShadow:'4px 4px 0 #000'}}>
+          <div className="inline-flex items-center gap-2 border-2 border-black px-4 py-2 bg-white mb-5" style={{boxShadow:'4px 4px 0 #000'}}>
             <span className="text-xs font-bold uppercase tracking-widest">How It Works</span>
           </div>
           <h2 className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4" style={{fontFamily:'Syne,sans-serif'}}>
@@ -52,8 +52,8 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className={`border-2 border-black p-6 relative ${step.color} ${step.textWhite ? 'text-white' : 'text-black'} hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform`}
-              style={{boxShadow:'5px 5px 0 #000'}}
+              className={`border-2 border-black p-6 relative ${step.color} ${step.textWhite ? 'text-white' : 'text-black'}`}
+              style={{boxShadow:'6px 6px 0 #000'}}
             >
               {/* Step number */}
               <div className={`text-6xl font-black leading-none mb-4 opacity-20 absolute top-4 right-4 ${step.textWhite?'text-white':'text-black'}`} style={{fontFamily:'Syne,sans-serif'}}>{step.num}</div>
@@ -71,9 +71,9 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom CTA strip */}
-        <div className="mt-12 border-2 border-black bg-[#22C55E] p-6 flex flex-col sm:flex-row items-center justify-between gap-4" style={{boxShadow:'5px 5px 0 #000'}}>
+        <div className="mt-12 border-3 border-black bg-[#22C55E] p-8 flex flex-col sm:flex-row items-center justify-between gap-4" style={{boxShadow:'6px 6px 0 #000'}}>
           <p className="font-black text-xl" style={{fontFamily:'Syne,sans-serif'}}>Ready to set up your Amaka today?</p>
-          <a href="#pricing" className="shrink-0 px-6 py-3 bg-black text-white font-bold border-2 border-black hover:bg-white hover:text-black transition-colors" style={{fontFamily:'Syne,sans-serif',boxShadow:'4px 4px 0 #fff'}}>
+          <a href="#pricing" className="shrink-0 px-6 py-3 bg-black text-white font-bold border-2 border-black" style={{fontFamily:'Syne,sans-serif',boxShadow:'5px 5px 0 #fff'}}>
             Start Now →
           </a>
         </div>

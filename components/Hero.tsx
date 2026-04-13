@@ -1,8 +1,22 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 export default function Hero() {
+  const roles = ['Sales Girl', 'Closer', 'Negotiator', 'Deal Maker', 'Customer Expert']
+  const [currentRole, setCurrentRole] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
-    <section className="min-h-screen pt-16 bg-white relative overflow-hidden flex flex-col">
+    <section className="min-h-screen pt-16 bg-white relative overflow-hidden flex flex-col border-b-4 border-black">
       {/* Marquee ticker */}
-      <div className="bg-[#22C55E] border-b-2 border-black py-2 overflow-hidden">
+      <div className="bg-[#22C55E] border-b-4 border-black py-3 overflow-hidden">
         <div className="flex whitespace-nowrap animate-ticker">
           {Array(4).fill(['AI Sales Agent', 'Close Deals 24/7', 'WhatsApp & Telegram', 'No More Back & Forth', 'Nigerian Businesses', 'Smart Negotiation']).flat().map((t,i)=>(
             <span key={i} className="mx-6 text-sm font-bold text-black uppercase tracking-widest">{t} <span className="mx-2 text-black/40">✦</span></span>
@@ -14,22 +28,33 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
           {/* Left */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-[#DCFCE7] animate-fade-up" style={{boxShadow:'3px 3px 0 #000'}}>
-              <span className="w-2 h-2 rounded-full bg-[#22C55E] inline-block"></span>
+            <div className="inline-flex items-center gap-2 border-2 border-black px-4 py-2 bg-white animate-fade-up" style={{boxShadow:'4px 4px 0 #000'}}>
+              <span className="w-2 h-2 bg-[#22C55E] inline-block"></span>
               <span className="text-xs font-bold uppercase tracking-widest">Powered by AI · Built for Nigeria</span>
             </div>
 
-            <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight animate-fade-up-d1" style={{fontFamily:'Syne,sans-serif'}}>
-              Meet{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10">Amaka</span>
-                <span className="absolute bottom-1 left-0 right-0 h-4 bg-[#22C55E] z-0 -rotate-1"></span>
-              </span>
-              <br />
-              <span className="text-black">Your Best</span>
-              <br />
-              <span className="text-[#22C55E]">Sales Girl.</span>
-            </h1>
+            <div>
+              <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight animate-fade-up-d1" style={{fontFamily:'Syne,sans-serif'}}>
+                Meet{' '}
+                <span className="relative inline-block">
+                  <span className="relative z-10">Amaka</span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-5 bg-[#22C55E] z-0 -rotate-2"></span>
+                </span>
+                <br />
+                <span className="text-black">Your Best</span>
+                <br />
+                <span className="relative inline-block min-h-[1.2em]" style={{fontFamily:'Syne,sans-serif'}}>
+                  <span className="text-[#22C55E] font-black relative inline-block">
+                    {roles[currentRole]}
+                  </span>
+                  <span className="absolute bottom-0 left-0 h-5 bg-[#22C55E] -rotate-2" style={{
+                    width: `${roles[currentRole].length * 0.57}em`,
+                    zIndex: -1,
+                    animation: 'fadeInOut 4s ease-in-out infinite'
+                  }}></span>
+                </span>
+              </h1>
+            </div>
 
             <p className="text-lg sm:text-xl text-gray-700 max-w-lg leading-relaxed animate-fade-up-d2 font-body">
               She replies customers, haggles prices, handles objections and closes deals — on <strong>WhatsApp</strong> and <strong>Telegram</strong> — while you sleep, eat, or attend class.

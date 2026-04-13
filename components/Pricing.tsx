@@ -95,11 +95,11 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 lg:py-28 bg-white border-t-2 border-black">
+    <section id="pricing" className="py-20 lg:py-28 bg-[#f5f5f5] border-t-4 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-white mb-5" style={{boxShadow:'3px 3px 0 #000'}}>
+          <div className="inline-flex items-center gap-2 border-2 border-black px-4 py-2 bg-[#22C55E] mb-5" style={{boxShadow:'4px 4px 0 #000'}}>
             <span className="text-xs font-bold uppercase tracking-widest">Pricing</span>
           </div>
           <h2 className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4" style={{fontFamily:'Syne,sans-serif'}}>
@@ -115,8 +115,8 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`border-2 border-black flex flex-col ${plan.bg} ${plan.textWhite ? 'text-white' : 'text-black'} relative`}
-              style={{boxShadow: plan.highlight ? '7px 7px 0 #22C55E' : '5px 5px 0 #000'}}
+              className={`border-3 border-black flex flex-col ${plan.bg} ${plan.textWhite ? 'text-white' : 'text-black'} relative`}
+              style={{boxShadow: plan.highlight ? '8px 8px 0 #22C55E' : '6px 6px 0 #000'}}
             >
               {/* Tag */}
               <div className={`border-b-2 border-black px-4 py-2 ${plan.tagBg} ${plan.textWhite&&plan.tagBg==='bg-white border-black'?'text-black':''}`}>
@@ -154,8 +154,8 @@ export default function Pricing() {
                 {/* CTA */}
                 <a
                   href={plan.name === 'Enterprise' ? '#contact' : '#'}
-                  className={`block text-center py-3 px-4 border-2 border-black font-bold text-sm hover:opacity-90 transition-opacity ${plan.ctaBg}`}
-                  style={{fontFamily:'Syne,sans-serif', boxShadow: plan.ctaShadow}}
+                  className={`block text-center py-3 px-4 border-2 border-black font-bold text-sm ${plan.ctaBg}`}
+                  style={{fontFamily:'Syne,sans-serif', boxShadow: `5px 5px 0 ${plan.highlight ? '#22C55E' : '#000'}`}}
                 >
                   {plan.cta} →
                 </a>
