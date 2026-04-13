@@ -82,7 +82,7 @@ export default function Solutions() {
         </div>
 
         {/* Quote */}
-        <div className="mt-14 border-2 border-black p-8 bg-[#f9f9f9] relative" style={{boxShadow:'6px 6px 0 #22C55E'}}>
+        <div className="mt-14 border-2 border-black p-8 bg-white relative" style={{boxShadow:'6px 6px 0 #000'}}>
           <div className="text-6xl font-black text-[#22C55E] leading-none mb-2" style={{fontFamily:'Syne,sans-serif'}}>"</div>
           <p className="text-xl sm:text-2xl font-black leading-snug max-w-2xl" style={{fontFamily:'Syne,sans-serif'}}>
             I used to spend 4 hours a day replying customers on WhatsApp. Now Amaka does it and I only step in to confirm payments.

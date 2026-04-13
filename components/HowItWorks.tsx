@@ -32,11 +32,11 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-[#f9f9f9] border-t-2 border-black">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-white border-t-2 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-white mb-5" style={{boxShadow:'3px 3px 0 #000'}}>
+          <div className="inline-flex items-center gap-2 border-2 border-black px-3 py-1.5 bg-[#22C55E] mb-5" style={{boxShadow:'4px 4px 0 #000'}}>
             <span className="text-xs font-bold uppercase tracking-widest">How It Works</span>
           </div>
           <h2 className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4" style={{fontFamily:'Syne,sans-serif'}}>
@@ -64,7 +64,7 @@ export default function HowItWorks() {
               <p className={`text-sm leading-relaxed ${step.textWhite ? 'text-white/80' : 'text-gray-700'}`}>{step.desc}</p>
               {/* Connector arrow (not last) */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-white border-2 border-black flex items-center justify-center text-xs font-black" style={{boxShadow:'2px 2px 0 #000'}}>→</div>
+                <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-white border-2 border-black flex items-center justify-center text-xs font-black" style={{boxShadow:'3px 3px 0 #000'}}>→</div>
               )}
             </div>
           ))}

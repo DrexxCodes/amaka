@@ -56,10 +56,6 @@ export default function Hero() {
 
           {/* Right — Chat mockup */}
           <div className="relative flex justify-center lg:justify-end animate-fade-up-d2">
-            {/* Background blobs */}
-            <div className="absolute -top-8 -right-8 w-64 h-64 bg-[#DCFCE7] rounded-full opacity-60 blur-3xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#22C55E] rounded-full opacity-20 blur-3xl"></div>
-
             {/* Phone mockup */}
             <div className="relative w-72 sm:w-80 border-2 border-black bg-white animate-float" style={{boxShadow:'8px 8px 0 #000'}}>
               {/* Phone top bar */}
@@ -85,10 +81,10 @@ export default function Hero() {
             </div>
 
             {/* Floating badges */}
-            <div className="absolute -top-4 -left-4 sm:-left-8 bg-white border-2 border-black px-3 py-2 text-xs font-bold animate-float" style={{boxShadow:'3px 3px 0 #22C55E',animationDelay:'1s'}}>
+            <div className="absolute -top-4 -left-4 sm:-left-8 bg-white border-2 border-black px-3 py-2 text-xs font-bold animate-float" style={{boxShadow:'4px 4px 0 #000',animationDelay:'1s'}}>
               🤝 Deal closed!
             </div>
-            <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-[#22C55E] border-2 border-black px-3 py-2 text-xs font-bold animate-float" style={{boxShadow:'3px 3px 0 #000',animationDelay:'2s'}}>
+            <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-[#22C55E] border-2 border-black px-3 py-2 text-xs font-bold animate-float" style={{boxShadow:'4px 4px 0 #000',animationDelay:'2s'}}>
               💬 3 chats closing...
             </div>
           </div>
