@@ -1,0 +1,248 @@
+.section {
+  padding: 100px 0;
+  background: var(--white);
+  border-top: var(--border);
+}
+
+.header {
+  max-width: 540px;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.accent {
+  color: var(--green);
+}
+
+.sub {
+  font-size: 16px;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: var(--border);
+}
+
+.card {
+  padding: 36px 28px;
+  border-right: var(--border);
+  background: var(--white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.cardGreen {
+  background: var(--green);
+}
+
+.cardBlack {
+  background: var(--black);
+  color: var(--white);
+}
+
+.cardHovered {
+  transform: translateY(-6px);
+  z-index: 2;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--white);
+  padding: 5px 14px;
+  border: var(--border);
+  white-space: nowrap;
+}
+
+.cardGreen .badge {
+  background: var(--black);
+  color: var(--green);
+}
+
+.cardBlack .badge {
+  background: var(--green);
+  color: var(--black);
+}
+
+.planHeader {
+  margin-bottom: 24px;
+}
+
+.planName {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.cardBlack .planName {
+  color: #aaa;
+  opacity: 1;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--black);
+}
+
+.cardGreen .price { color: var(--black); }
+.cardBlack .price { color: var(--green); }
+
+.period {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
+.cardBlack .period { color: #666; }
+
+.planDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gray-text);
+}
+
+.cardBlack .planDesc { color: #888; }
+
+.divider {
+  height: 2px;
+  background: var(--black);
+  margin-bottom: 24px;
+  opacity: 0.1;
+}
+
+.cardBlack .divider { background: #333; opacity: 1; }
+.cardGreen .divider { background: var(--black); opacity: 0.2; }
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.cardBlack .feature { color: var(--white); }
+
+.featureOff {
+  opacity: 0.35;
+}
+
+.featureIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureIconOn {
+  color: var(--green-dark);
+}
+
+.cardGreen .featureIconOn { color: var(--black); }
+.cardBlack .featureIconOn { color: var(--green); }
+
+.featureIconOff {
+  color: #ccc;
+}
+
+.cardBlack .featureIconOff { color: #444; }
+
+.planCta {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.note {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    border-bottom: var(--border);
+  }
+
+  .card:nth-child(even) {
+    border-right: none;
+  }
+
+  .card:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+
+  .card:last-child {
+    border-bottom: none;
+  }
+}

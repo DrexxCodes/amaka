@@ -1,0 +1,154 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.scrolled {
+  background: var(--white);
+  border-bottom: var(--border);
+  padding: 12px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--black);
+  letter-spacing: -0.03em;
+}
+
+.logoIcon {
+  color: var(--green);
+  font-size: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.links a {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  transition: color 0.15s;
+  position: relative;
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.2s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar1, .bar2, .bar3 {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--black);
+  transition: all 0.2s ease;
+}
+
+.bar1Open {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--black);
+  transform: translateY(7.5px) rotate(45deg);
+  transition: all 0.2s ease;
+}
+
+.bar2Open {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--black);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.bar3Open {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--black);
+  transform: translateY(-7.5px) rotate(-45deg);
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: var(--border);
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .ctas {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    background: var(--white);
+    border-bottom: var(--border);
+  }
+}
